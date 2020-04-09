@@ -1,8 +1,11 @@
 function sandwichCalculator(slicesOfBread, slicesOfCheese){
 	var totalnumberofsandwiches = 0;
-	totalnumberofsandwiches= slicesOfBread/2;
+	totalnumberofsandwiches= Math.floor(slicesOfBread/2);
+	if ( slicesOfCheese < totalnumberofsandwiches){
+		totalnumberofsandwiches = slicesOfCheese;
+	}
 	return totalnumberofsandwiches;
 
 }
 
-console.log(sandwichCalculator(22, 10));
+console.log(sandwichCalculator(111, 123));
